@@ -8,7 +8,7 @@ console.log(process.env)
 var healthy=true;
 
 app.get('/', function (req, res) {
-  res.send('Hello world v.13 '+ os.hostname() + '\n');
+  res.send('Hola Mundo v.14, Hostname '+ os.hostname() + '\n');
 });
 
 app.get('/healthz', function (req, res) {
@@ -16,10 +16,10 @@ app.get('/healthz', function (req, res) {
   if(healthy)
    res.send('OK');
   else
-   res.status(404).send('NOT OK');
+   res.status(404).send('NOT FOUND');
 });
 
-app.get('/cancer', function (req, res) {
+app.get('', function (req, res) {
    healthy=false;
    res.send('Killed ' + os.hostname());
 });
